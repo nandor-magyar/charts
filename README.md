@@ -1,36 +1,9 @@
-# Whoogle helm chart
+# Nandor Magyar's helm charts
 
-All the credit for the underlying container goes to:
-https://github.com/benbusby/whoogle-search
+I am always happy if something is available for deployment using Helm.
+Not every awesome software has its own helm chart, so I've created for some.
 
-I have just created a helm chart to make the deployment easier for others and to
-get to know Helm a bit more.
+Enjoy!
 
-## Prerequisites
-
-- Kubernetes 1.16+
-- Helm 3+
-
-## Adding a repository
-
-```
-helm repo add nandormagyar https://github.com/nandor-magyar/my-charts
-```
-
-## Install
-
-```
-helm install [RELEASE_NAME] nandormagyar/whoogle
-```
-
-## Information
-
-Use helm to get more information about possible configuration values.
-
-```
-helm show values nandormagyar/whoogle
-```
-
-## Contribute
-
-Any advice or request is appriciated, consider opening submitting an issue or opening a PR.
+Hope it helps,
+feel free to provide feedback.
