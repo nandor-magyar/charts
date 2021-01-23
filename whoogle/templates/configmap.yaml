@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{include "whoogle.fullname" .}}
+data:
+{{- with .Values.whoogle }}
+{{ if .user }} WHOOGLE_USER: {{.user}} {{- end }}
+{{ if .password }} WHOOGLE_PASS: {{.password}} {{- end }}
+{{ if .proxyUser }} WHOOGLE_PROXY_USER: {{.proxyUser}} {{- end }}
+{{ if .proxyPassword }} WHOOGLE_PROXY_PASS: {{.proxyPassword}} {{- end }}
+{{ if .proxyType }} WHOOGLE_PROXY_TYPE: {{.proxyType}} {{- end }}
+{{ if .proxyLoc }} WHOOGLE_PROXY_LOC: {{.proxyLoc}} {{- end }}
+{{ if .exportPort }} EXPOSE_PORT: {{.exposePort}} {{- end }}
+{{ if .httpsOnly }} HTTPS_ONLY: {{.httpsOnly}} {{- end }}
+{{ if .altTw }} WHOOGLE_ALT_TW: {{.altTw}} {{- end }}
+{{ if .altYt }} WHOOGLE_ALT_YT: {{.altYt}} {{- end }}
+{{ if .altIg }} WHOOGLE_ALT_IG: {{.altIg}} {{- end }}
+{{- end}}

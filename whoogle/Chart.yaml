@@ -1,0 +1,7 @@
+apiVersion: v2
+name: whoogle
+description: A Helm chart wrapping benbusby's whoogle-search
+
+type: application
+version: 0.1.0
+appVersion: "v0.3.0"
